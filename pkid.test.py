@@ -11,7 +11,7 @@ entropy_bytes = bytes(_mnemonic.to_entropy(seed_phrase))
 
 _pkid = pkid.Pkid(node_url, entropy_bytes)
 
-set_response = _pkid.set_document("pokemon", "pikachu", is_encrypted = True)
+set_response = _pkid.set_document("pokemon", "mew", is_encrypted = True)
 get_response = _pkid.get_document("pokemon")
 
 print(set_response)

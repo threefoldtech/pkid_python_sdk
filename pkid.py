@@ -40,7 +40,7 @@ class Pkid:
 
     def set_document(self, key, value, is_encrypted = False):
         headers = self._get_headers()
-        handled_value = self._encrypt(value.encode("UTF-8")) if is_encrypted else value.encode("UTF-8")
+        handled_value = self._encrypt(value.encode("UTF-8")) if is_encrypted else value
 
         envelope = json.dumps({
             "is_encrypted": is_encrypted,
